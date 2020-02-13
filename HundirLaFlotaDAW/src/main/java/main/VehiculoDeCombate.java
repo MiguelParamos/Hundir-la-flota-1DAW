@@ -21,10 +21,10 @@ public class VehiculoDeCombate extends ElementoConNombre {
      */
 
     public VehiculoDeCombate(CasillaBarco[] p, String n, char s,char e) {
-        super(n); 
-        this.posiciones = p;
-        this.simbolo = s;
-        this.estado=e;
+        super(n);
+        setPosiciones(p);
+        setSimbolo(s);
+        setEstado(e);
     }
     /**
      * Método que no devuelve nada y lleva void
@@ -48,16 +48,15 @@ public class VehiculoDeCombate extends ElementoConNombre {
         return this.posiciones;
     }
     
-    //Setter de Estado
-    public void setEstado(char e){
+    public final void setEstado(char e){
         estado=e;
     }
-    //Setter de Simbolo
-    public void setSimbolo(char s){
+    
+    public final void setSimbolo(char s){
         this.simbolo=s;
     }
-    //Setter de Posiciones
-    public void setPosiciones(CasillaBarco[] cb){
+
+    public final void setPosiciones(CasillaBarco[] cb){
         this.posiciones=cb;
     }
 }

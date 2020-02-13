@@ -8,14 +8,15 @@ package main;
 /**
  * Objeto Jugador, encangado de realizar funciones del juego
  *
- * @author 2DAW
+ * @author Silvia SB
  */
-public class Jugador {
+public class Jugador extends ElementoConNombre{
 
     private byte puntuacion;// puntos obtenidos por el jugador
-    private mapa Mapa;// localización de las piezas (barco/avión) del jugador
+    private Mapa mapa;// localización de las piezas (barco/avión) del jugador
 
-    public Jugador(byte puntuacion, mapa Mapa) {
+    public Jugador(String n,byte puntuacion, Mapa mapa) {
+        super(n);
         this.setPuntuacion(puntuacion);
         this.setMapa(mapa);
     }
@@ -35,13 +36,14 @@ public class Jugador {
     public byte getMapa() {
         return this.mapa;
     }
-
-    public void setPuntuacion(byte puntuacion) {
+    
+    //setter de puntuación
+    public final void setPuntuacion(byte puntuacion) {
         this.puntuacion = puntuacion;
     }
-
-    public void setMapa(mapa Mapa) {
-        this.Mapa = Mapa;
+    //setter de Mapa
+    public final void setMapa(Mapa mapa) {
+        this.mapa = mapa;
     }
     
    
@@ -50,7 +52,7 @@ public class Jugador {
  * @param posX posición de disparo barco/avión en el eje X del mapa del rival
  * @param posY posición de disparo a barco/avión en el eje X del mapa del rival
  * @param mapaRival indicará si le ha dado al barco/avión o al agua
- * @return 
+ * @return String
  */
     public String disparar(byte posX, byte posY, Mapa mapaRival) {
         return "dado";
@@ -78,11 +80,6 @@ public class Jugador {
      */
     public boolean hasPerdido() {
 
-        boolean hasPerdido = true;
-
-        if (hasPerdido == true) {
-            System.out.println("Has perdido");
-        }
         return false;
     }
 }
