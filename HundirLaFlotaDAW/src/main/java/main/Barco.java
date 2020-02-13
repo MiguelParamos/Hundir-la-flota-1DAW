@@ -10,7 +10,7 @@ package main;
  * @author nicoc
  */
 public class Barco {
-    public class Barco {
+
     public Barco(byte [][]posiciones, String n,char s){
         super(posiciones,n,s);
         
