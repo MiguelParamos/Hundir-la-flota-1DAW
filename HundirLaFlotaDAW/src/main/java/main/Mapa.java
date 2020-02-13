@@ -9,15 +9,16 @@ import java.util.Scanner;
 
 /**
  *
- * @author 2DAW
+ * @author javier alcalde y daniel perez
  */
 public class Mapa {
     
 //private charcuadrillaMapa; el mapa en sí.
     private char[] elementos;//vehículo de combate
-    private byte nfilas;
-    private byte ncolumnas;
+    private byte nfilas; //número de filas
+    private byte ncolumnas; // número de columnas
 
+    //constructor
     public Mapa(char[] elementos, byte nfilas, byte ncolumnas) {
         Scanner sc=new Scanner(System.in);
         System.out.println("¿Cuantas filas debe tener el mapa?");
@@ -45,43 +46,43 @@ public class Mapa {
  
     }
       
-    
+    //funcion toString
     public String toString() {
         
         return null;
     }
 
-        
+     //funcion colocarBarcosyAviones   
     public void colocarBarcosyAviones(){
         
     }
-    
-    public boolean reccibirDisparo(int posX, int posY){
+    //funcion recibirDisparo
+    public boolean recibirDisparo(int posX, int posY){
  
         return true;
     }
     
-    
+    //Getter getElementos
     public char[] getElementos() {
         return elementos;
     }
-
+    //setter setElementos
     public void setElementos(char[] elementos) {
         this.elementos = elementos;
     }
-
+    //getter getNfilas
     public byte getNfilas() {
         return nfilas;
     }
-
+    //setter setNfilas
     public void setNfilas(byte nfilas) {
         this.nfilas = nfilas;
     }
-
+    //getter getNcolumnas
     public byte getNcolumnas() {
         return ncolumnas;
     }
-
+    //setter setNcolumnas
     public void setNcolumnas(byte ncolumnas) {
         this.ncolumnas = ncolumnas;
     }
