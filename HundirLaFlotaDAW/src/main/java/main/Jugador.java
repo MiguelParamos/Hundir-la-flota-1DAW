@@ -10,12 +10,13 @@ package main;
  *
  * @author 2DAW
  */
-public class Jugador {
+public class Jugador extends ElementoConNombre{
 
     private byte puntuacion;// puntos obtenidos por el jugador
-    private mapa Mapa;// localización de las piezas (barco/avión) del jugador
+    private Mapa mapa;// localización de las piezas (barco/avión) del jugador
 
-    public Jugador(byte puntuacion, mapa Mapa) {
+    public Jugador(String n,byte puntuacion, Mapa mapa) {
+        super(n);
         this.setPuntuacion(puntuacion);
         this.setMapa(mapa);
     }
@@ -36,12 +37,12 @@ public class Jugador {
         return this.mapa;
     }
 
-    public void setPuntuacion(byte puntuacion) {
+    public final void setPuntuacion(byte puntuacion) {
         this.puntuacion = puntuacion;
     }
 
-    public void setMapa(mapa Mapa) {
-        this.Mapa = Mapa;
+    public final void setMapa(Mapa mapa) {
+        this.mapa = mapa;
     }
     
    
@@ -78,11 +79,6 @@ public class Jugador {
      */
     public boolean hasPerdido() {
 
-        boolean hasPerdido = true;
-
-        if (hasPerdido == true) {
-            System.out.println("Has perdido");
-        }
         return false;
     }
 }

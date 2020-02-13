@@ -19,7 +19,17 @@ public class Avion extends VehiculoDeCombate {
     
     public Avion(CasillaBarco[] posiciones, String nombre,char simbolo,char estado,boolean mov){
         super(posiciones,nombre,simbolo,estado);
+        setDireccionMovimiento(mov);
     }
+
+    public boolean isDireccionMovimiento() {
+        return direccionMovimiento;
+    }
+
+    public void setDireccionMovimiento(boolean direccionMovimiento) {
+        this.direccionMovimiento = direccionMovimiento;
+    }
+    
     
     
 }
