@@ -11,6 +11,12 @@ import java.util.Scanner;
  *
  * @author javier alcalde y daniel perez
  */
+
+/**
+ *@param elementos vehiculo de combate.
+ *@param nfilas numero de filas.
+ *@param ncolumnas numero de columnas.
+ */
 public class Mapa {
     
 //private charcuadrillaMapa; el mapa en sí.
@@ -63,26 +69,50 @@ public class Mapa {
     }
     
     //Getter getElementos
+    /**
+     * 
+     * @return elementos-
+     */
     public char[] getElementos() {
         return elementos;
     }
     //setter setElementos
+    /**
+     * 
+     * @param elementos 
+     */
     public void setElementos(char[] elementos) {
         this.elementos = elementos;
     }
     //getter getNfilas
+    /**
+     * 
+     * @return nfilas (byte).
+     */
     public byte getNfilas() {
         return nfilas;
     }
     //setter setNfilas
+    /**
+     * 
+     * @param nfilas 
+     */
     public void setNfilas(byte nfilas) {
         this.nfilas = nfilas;
     }
     //getter getNcolumnas
+    /**
+     * 
+     * @return ncolumnas (byte).
+     */
     public byte getNcolumnas() {
         return ncolumnas;
     }
     //setter setNcolumnas
+    /**
+     * 
+     * @param ncolumnas 
+     */
     public void setNcolumnas(byte ncolumnas) {
         this.ncolumnas = ncolumnas;
     }
