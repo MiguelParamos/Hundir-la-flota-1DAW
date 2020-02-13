@@ -55,12 +55,15 @@ public class CasillaBarco {
      */
     public void recibirDisparo(){
         
-        if(this.tocado==true){
-            
-            System.out.println("Esta casilla esta tocada");
-            
-        }
         
+    }
+
+    public boolean isTocado() {
+        return tocado;
+    }
+
+    public void setTocado(boolean tocado) {
+        this.tocado = tocado;
     }
     
     
