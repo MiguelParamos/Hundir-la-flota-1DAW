@@ -18,7 +18,7 @@ public class ElementoConNombre {
     private String nombre;
 
     public ElementoConNombre(String n){
-        nombre = n;
+        setNombre(n);
     }
     
     //Getter
@@ -27,7 +27,7 @@ public class ElementoConNombre {
     }
     
     //Setter
-    public void setNombre(String n){
+    public final void setNombre(String n){
         nombre = n;
     }
 }

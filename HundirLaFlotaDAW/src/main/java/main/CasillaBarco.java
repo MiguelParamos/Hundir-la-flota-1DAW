@@ -7,7 +7,7 @@ package main;
 
 /**
  * Descripción Clase CasillaBarco: Clase que describe las casillas del tablero.
- * 
+ * @author Raúl González Parra
  */
 public class CasillaBarco {
     
@@ -55,12 +55,21 @@ public class CasillaBarco {
      */
     public void recibirDisparo(){
         
-        if(this.tocado==true){
-            
-            System.out.println("Esta casilla esta tocada");
-            
-        }
         
+    }
+    /**
+     * Descripción getter isTocado: Se utiliza para acceder al valor de la variable tocado.
+     * @return Retorna verdadero o falso, si las casillas han sido tocadas o no. 
+     */
+    public boolean isTocado() {
+        return tocado;
+    }
+    /**
+     * Descripción setter setTocado: Comprueba si las casillas han sido tocadas o no.
+     * @param tocado Parámetro que indica el estado de la casilla.  
+     */
+    public void setTocado(boolean tocado) {
+        this.tocado = tocado;
     }
     
     

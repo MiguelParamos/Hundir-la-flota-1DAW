@@ -7,13 +7,15 @@ package main;
 
 /**
  *
- * @author nicoc
+ * @author Ccenec
  */
-public class Barco extends VehiculoDeCombate{
+public class Main {
 
-    public Barco(CasillaBarco []posiciones, String n,char s,char e){
-        super(posiciones,n,s,e);
-        
-    } 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
     
 }
