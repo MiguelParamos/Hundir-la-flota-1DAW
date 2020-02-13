@@ -37,11 +37,17 @@ public class Jugador extends ElementoConNombre{
         return this.mapa;
     }
     
-    //setter de puntuación
+    /**
+     * setter de puntuación
+     * @param puntuacion 
+     */
     public final void setPuntuacion(byte puntuacion) {
         this.puntuacion = puntuacion;
     }
-    //setter de Mapa
+    /**
+     * setter de mapa
+     * @param mapa 
+     */
     public final void setMapa(Mapa mapa) {
         this.mapa = mapa;
     }
