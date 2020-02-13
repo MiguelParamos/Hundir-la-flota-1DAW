@@ -6,7 +6,7 @@
 package main;
 
 /**
- *
+ * Clase que representa un vehiculo de combate que puede ser avion o barco
  * @author Jose Martín
  */
 public class VehiculoDeCombate extends ElementoConNombre {

@@ -8,7 +8,7 @@ package main;
 import java.util.Scanner;
 
 /**
- *
+ * 
  * @author Javier Alcalde
  * @author Daniel Pérez
  */

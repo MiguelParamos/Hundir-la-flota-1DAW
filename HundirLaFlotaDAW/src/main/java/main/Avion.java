@@ -21,7 +21,7 @@ public class Avion extends VehiculoDeCombate {
         
     }
     /**
-     * 
+     * constructor de avion con todos los campos
      * @param posiciones posicion del avion
      * @param nombre nombre de avion
      * @param simbolo simbolo del avion
