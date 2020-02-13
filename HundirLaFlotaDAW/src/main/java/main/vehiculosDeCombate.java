@@ -9,19 +9,19 @@ package main;
  *
  * @author Jose
  */
-public class vehiculosDeCombate extends elementoConNombre{
+public class vehiculosDeCombate extends ElementoConNombre{
     
-    private casillaBarco[] posiciones;
+    private byte[] posiciones;
     private char estado;
     private char simbolo;
     
-    public vehiculoDeCombate(byte[][] p, string n, char s){
+    public VehiculoDeCombate(byte[] p, string n, char s){
     super(n);
     this.posiciones = p;
     this.simbolo = s;
    
     }
-    public recibirDisparos(int x, int y){
+    public RecibirDisparos(int x, int y){
           
             this.posx = x;
             this.posy= y;
