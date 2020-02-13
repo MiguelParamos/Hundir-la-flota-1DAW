@@ -15,10 +15,11 @@ public class VehiculoDeCombate extends ElementoConNombre {
     private char estado;
     private char simbolo;
 
-    public VehiculoDeCombate(CasillaBarco[] p, String n, char s) {
+    public VehiculoDeCombate(CasillaBarco[] p, String n, char s,char e) {
         super(n);
         this.posiciones = p;
         this.simbolo = s;
+        this.estado=e;
     }
 
     public void recibirDisparos(int x, int y) {
