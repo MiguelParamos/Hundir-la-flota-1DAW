@@ -33,7 +33,7 @@ public class Jugador extends ElementoConNombre{
      * getter de Mapa
      * @return localización de barcos/aviones del jugador
      */
-    public byte getMapa() {
+    public Mapa getMapa() {
         return this.mapa;
     }
 
