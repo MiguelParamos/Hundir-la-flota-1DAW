@@ -14,7 +14,12 @@ public class Jugador extends ElementoConNombre{
 
     private byte puntuacion;// puntos obtenidos por el jugador
     private Mapa mapa;// localización de las piezas (barco/avión) del jugador
-
+/**
+ * Constructor de Jugador
+ * @param n
+ * @param puntuacion
+ * @param mapa 
+ */
     public Jugador(String n,byte puntuacion, Mapa mapa) {
         super(n);
         this.setPuntuacion(puntuacion);
