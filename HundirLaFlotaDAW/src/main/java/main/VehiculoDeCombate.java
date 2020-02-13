@@ -17,9 +17,9 @@ public class VehiculoDeCombate extends ElementoConNombre {
 
     public VehiculoDeCombate(CasillaBarco[] p, String n, char s,char e) {
         super(n);
-        this.posiciones = p;
-        this.simbolo = s;
-        this.estado=e;
+        setPosiciones(p);
+        setSimbolo(s);
+        setEstado(e);
     }
 
     public void recibirDisparos(int x, int y) {
@@ -38,15 +38,15 @@ public class VehiculoDeCombate extends ElementoConNombre {
         return this.posiciones;
     }
     
-    public void setEstado(char e){
+    public final void setEstado(char e){
         estado=e;
     }
     
-    public void setSimbolo(char s){
+    public final void setSimbolo(char s){
         this.simbolo=s;
     }
 
-    public void setPosiciones(CasillaBarco[] cb){
+    public final void setPosiciones(CasillaBarco[] cb){
         this.posiciones=cb;
     }
 }

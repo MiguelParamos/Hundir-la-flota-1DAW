@@ -9,10 +9,10 @@ package main;
  *
  * @author nicoc
  */
-public class Barco {
+public class Barco extends VehiculoDeCombate{
 
-    public Barco(byte [][]posiciones, String n,char s){
-        super(posiciones,n,s);
+    public Barco(CasillaBarco []posiciones, String n,char s,char e){
+        super(posiciones,n,s,e);
         
     } 
     
