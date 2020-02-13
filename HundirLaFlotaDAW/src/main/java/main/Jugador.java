@@ -8,7 +8,7 @@ package main;
 /**
  * Objeto Jugador, encangado de realizar funciones del juego
  *
- * @author 2DAW
+ * @author Silvia SB
  */
 public class Jugador extends ElementoConNombre{
 
@@ -33,14 +33,15 @@ public class Jugador extends ElementoConNombre{
      * getter de Mapa
      * @return localización de barcos/aviones del jugador
      */
-    public byte getMapa() {
+    public Mapa getMapa() {
         return this.mapa;
     }
-
+    
+    //setter de puntuación
     public final void setPuntuacion(byte puntuacion) {
         this.puntuacion = puntuacion;
     }
-
+    //setter de Mapa
     public final void setMapa(Mapa mapa) {
         this.mapa = mapa;
     }
@@ -51,7 +52,7 @@ public class Jugador extends ElementoConNombre{
  * @param posX posición de disparo barco/avión en el eje X del mapa del rival
  * @param posY posición de disparo a barco/avión en el eje X del mapa del rival
  * @param mapaRival indicará si le ha dado al barco/avión o al agua
- * @return 
+ * @return String
  */
     public String disparar(byte posX, byte posY, Mapa mapaRival) {
         return "dado";
