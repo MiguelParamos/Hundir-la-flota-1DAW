@@ -100,8 +100,13 @@ public class  Guardia extends Persona {
     
     public String toString() {
           String aux="";
-        aux+=this.getNombre()+" ";
-        aux+=this.getApellido()+" ";
+        aux+="Nombre: "+this.getNombre()+"";
+        aux+="Apellido "+this.getApellido()+"\n";
+        aux+="Nif: "+this.getNif()+"\n";
+        aux+="turno"+this.getTurno()+"\n";
+        aux+="Trabajo "+this.getTrabajoQueSupervisa()+"\n";
+        aux+="Horario: "+this.getHorario()+"\n";
+        aux+="Bloque "+this.getBloqueAsignado()+"\n";
         return "Guardia{"su + "turno=" + turno + ", trabajoQueSupervisa=" + trabajoQueSupervisa + ", horario=" + horario + ", bloqueAsignado=" + bloqueAsignado + '}';
     }
         
