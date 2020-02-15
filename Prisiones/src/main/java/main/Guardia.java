@@ -98,6 +98,10 @@ public class  Guardia extends Persona {
         this.bloqueAsignado = bloqueAsignado;
     }
     
+    /**
+     * método que concatena en un string todos los datos de un Guardia
+     * @return todos los datos del Guardia
+     */
     public String toString() {
           String aux="";
         aux+="Nombre: "+this.getNombre()+"";
@@ -107,7 +111,7 @@ public class  Guardia extends Persona {
         aux+="Trabajo "+this.getTrabajoQueSupervisa()+"\n";
         aux+="Horario: "+this.getHorario()+"\n";
         aux+="Bloque "+this.getBloqueAsignado()+"\n";
-        return "Guardia{"su + "turno=" + turno + ", trabajoQueSupervisa=" + trabajoQueSupervisa + ", horario=" + horario + ", bloqueAsignado=" + bloqueAsignado + '}';
+        return aux;
     }
         
            
