@@ -10,10 +10,13 @@ package main;
  * @author nico
  */
 public class Barco extends VehiculoDeCombate{
+    
+ 
+    
 /**
- * Funcion para meter barco en una casilla
- * @param posiciones
- * @param n
+ * Constructor de barco con todos los campos
+ * @param posiciones la posicion del barco
+ * @param n el nombre del barco
  * @param s simbolo del barco
  * @param e estado del barco
  */
