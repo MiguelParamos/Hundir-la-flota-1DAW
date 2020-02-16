@@ -51,10 +51,20 @@ public class CasillaBarco {
         
     }
     /**
-     * Descripción metodo recibirDisparo: Se utiliza para indicar si un barco o un avión le ha disparado a una casilla.
+     * Descripción metodo recibirDisparo: Se utiliza para indicar si un barco o un avión le ha disparado a una casilla
+     * Comparando la x e y recibido por las casillas donde esté el barco.
+     * @param xRecibida x recibido del disparo
+     * @param yRecibida y recibido del disparo
+     * @return el estado del barco 
      */
-    public void recibirDisparo(){
-        
+    public boolean recibirDisparo(byte xRecibida,byte yRecibida){
+        if (xRecibida==this.posX&&yRecibida==this.posY) {
+            
+            this.tocado=true;
+            return true;
+        }else{
+            return false;
+        }
         
     }
     /**
