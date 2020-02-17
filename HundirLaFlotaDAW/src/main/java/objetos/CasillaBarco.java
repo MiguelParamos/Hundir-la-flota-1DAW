@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
  * Descripción Clase CasillaBarco: Clase que describe las casillas del tablero.
@@ -50,12 +50,15 @@ public class CasillaBarco {
         this.posY=y;
         
     }
-    /**
-     * Descripción metodo recibirDisparo: Se utiliza para indicar si un barco o un avión le ha disparado a una casilla.
-     */
-    public void recibirDisparo(){
+   /**
+    * Descripción metodo recibirDisparo: Se utiliza para indicar si un barco o un avión le ha disparado a una casilla.
+    * @param x coordenada x donde se recibe disparo
+    * @param y coordenada y donde se recibe disparo
+    * @return true->si el disparo ha sido en mi misma posición , false-> en caso contrario
+    */
+    public boolean recibirDisparo(byte x,byte y){
         
-        
+        return false;
     }
     /**
      * Descripción getter isTocado: Se utiliza para acceder al valor de la variable tocado.
@@ -71,6 +74,8 @@ public class CasillaBarco {
     public void setTocado(boolean tocado) {
         this.tocado = tocado;
     }
+    
+    
     
     
     

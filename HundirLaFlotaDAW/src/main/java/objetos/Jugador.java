@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
  * Objeto Jugador, encangado de realizar funciones del juego
@@ -73,7 +73,7 @@ public class Jugador extends ElementoConNombre{
  * @param turno, momento de la partida
  * @return turno
  */
-    public String jugarTurno(int turno) {
+    public String jugarTurno(int turno,Jugador rival) {
         return turno + "";
     }
 /**

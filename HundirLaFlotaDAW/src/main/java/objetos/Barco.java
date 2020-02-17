@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
  *
@@ -11,8 +11,8 @@ package main;
  */
 public class Barco extends VehiculoDeCombate{
 
-    public Barco(CasillaBarco []posiciones, String n,char s,char e){
-        super(posiciones,n,s,e);
+    public Barco(CasillaBarco []posiciones, String n,char s){
+        super(posiciones,n,s);
         
     } 
     
