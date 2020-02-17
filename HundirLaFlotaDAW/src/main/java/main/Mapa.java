@@ -31,6 +31,11 @@ public class Mapa {
         
         return null;
     }
+    
+    public String imprimeParaRival(){
+        
+        return null;
+    }
 
      //funcion colocarBarcosyAviones   
     public void colocarBarcosyAviones(){
