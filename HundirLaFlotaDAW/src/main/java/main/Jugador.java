@@ -72,14 +72,15 @@ public class Jugador extends ElementoConNombre{
     }
 /**
  * Función: el jugador toma acción contra otro jugador
- * @param turno
+ * @param turno turno correspondiente
+ * @param rival persona enemiga
  * @return null 
  */
-    public String jugarTurno(int turno) {
+    public String jugarTurno(int turno, Jugador rival) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Turno "+turno);
         mapa.toString();
-        mapa.imprimeParaRival();
+        System.out.println(imprimeParaRival(rival));
         byte dfila, dcolumna;
         do {
             System.out.println("Indique la fila que desea disapara");
@@ -93,6 +94,14 @@ public class Jugador extends ElementoConNombre{
         }else{
             System.out.println("¡Agua!");
         }
+        return null;
+    }
+    /**
+     * Función crea mapa del jugador rival
+     * @param rival
+     * @return 
+     */
+    public String imprimeParaRival(Jugador rival){
         return null;
     }
 /**
