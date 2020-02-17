@@ -6,13 +6,13 @@
 package objetos;
 
 /**
- *
- * @author 2DAW
+ *Clase ElementoConNombre
+ * @author Ale Ríos
  */
 public class ElementoConNombre {
     /**
- * Clase ElementoConNombre
- * Ale Ríos
+ * 
+ * 
  */
 
     private String nombre;

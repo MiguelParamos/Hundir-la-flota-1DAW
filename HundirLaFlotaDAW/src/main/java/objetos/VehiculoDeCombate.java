@@ -33,9 +33,45 @@ public class VehiculoDeCombate extends ElementoConNombre {
      * @param posición eje y 
      * @return boolean que indica si el disparo le ha dado al barco
      */
-    public boolean recibirDisparo(int x, int y) {
-            return false;
+    
+     public void rellenarRecibirDisparo(int x, int y){
+        
+        for (int i = 0; i < posiciones.length; i++) {
+            
+            posiciones[i].equals(recibirDisparos(x,y));
+            
+            if(posiciones[i].equals(true)){
+                
+                if(estado=='n'){
+                    
+                    estado='t';
+                    
+                }
+                
+            }
+        }
+        
     }
+    
+    public boolean recibirDisparos(int x, int y) {
+        
+        for (int i = 0; i < posiciones.length; i++) {
+            
+            if(posiciones[i].equals(x)){
+                
+                
+                return true;
+                
+            }else{
+                
+                return false;
+                
+            }
+            
+        }
+       return false;
+    }
+    
     /**
      * Getter de estado
      * @return devuelve el estado del barco o del avión
