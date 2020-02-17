@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 import java.util.Scanner;
 
@@ -118,7 +118,15 @@ public class Jugador extends ElementoConNombre{
      * @return  false, ha ganado la partida
      */
     public boolean hasPerdido() {
-
-        return false;
+        //Como tengo que recorrer todas las posiciones, necesito un for
+        for (int i = 0; i < this.mapa.getElementos().length; i++) {
+            //Miro a ver: Si algún barco o avión está normal o tocado, aún no he perdido
+            if(this.mapa.getElementos()[i].getEstado()=='t'||
+                    this.mapa.getElementos()[i].getEstado()=='n'){
+                return false;
+            }
+        }
+        //Si no hay ningún barco tocado o normal, es que todos están hundidos, y he perdido
+        return true;
     }
 }
