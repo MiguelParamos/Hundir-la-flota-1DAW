@@ -5,7 +5,7 @@ package main;
  *Esta es la clase de habitacion funcional que define una habitacion y todo lo relacionado con ella
  * @author Ale Rios
  */
-public class HabitacionFuncional extends CosaConNombre{
+public class HabitacionFuncional extends CosaconNombre{
     private byte bloque; // Numero de bloque
     
     /**
