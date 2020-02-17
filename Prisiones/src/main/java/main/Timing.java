@@ -8,46 +8,48 @@ package main;
 import java.time.LocalTime;
 
 /**
- *Descripción de clase Timing: Clase que define la hora inicio y la hora final
+ * Descripción de clase Timing: Clase que define la hora inicio y la hora final
  * de los trabajos/actividades.
- * @author Daniel Pérez García
- * 17/02/2020
+ *
+ * @author Daniel Pérez García 17/02/2020
  */
 public class Timing {
-      
-    
-LocalTime horaInicio = LocalTime.now(); //hora inicio
-LocalTime horaFin = LocalTime.now(); //hora final
 
+    private LocalTime horaInicio; //hora inicio
+    private LocalTime horaFin; //hora final
 
-/**
- * 
- * @param cosaConNombre
- * @param horaInicio
- * @param horaFin
- * @param Trabajo
- * @param Actividad 
- */
-public Timing(String cosaConNombre, LocalTime horaInicio, LocalTime horaFin, String Trabajo, String Actividad) {
- 
-    this.horaInicio=horaInicio;
-    this.horaFin=horaFin;
-        
     /**
-     * Funcion de Timing.
+     *
+     * @param cosaConNombre
+     * @param horaInicio
+     * @param horaFin
+     * @param Trabajo
+     * @param Actividad
      */
+    public Timing(LocalTime horaInicio, LocalTime horaFin) {
+
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
     }
 
+    public LocalTime getHoraInicio() {
 
-/*public String getHora(){
-        
-        return this.horaInicio+this.horaFin;
-              
+        return this.horaInicio;
+
     }
 
-public String setHora(){
-        
-        return this.horaInicio+this.horaFin;
-              
-    }*/
+    public void setHoraInicio(LocalTime lt) {
+        this.horaInicio = lt;
+    }
+    
+    
+    public LocalTime getHoraFin() {
+
+        return this.horaFin;
+
+    }
+
+    public void setHoraFin(LocalTime lt) {
+        this.horaFin = lt;
+    }
 }

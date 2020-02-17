@@ -11,14 +11,14 @@ package main;
  */
 public class Horario {
     
-    private actividadesDiarias[] Timing;//actividades que se realizan en el horario
+    private Timing[] actividadesDiarias;//actividades que se realizan en el horario
     
     /**
      * Constructor de Horario
      * @param actividadesDiarias 
      */
-    public Horario(String actividadesDiarias[]) {
-        this.Timing =actividadesDiarias ;
+    public Horario(Timing[] actividadesDiarias) {
+        this.actividadesDiarias=actividadesDiarias ;
     }
     
     
@@ -26,15 +26,15 @@ public class Horario {
      * getter de las actividades diarias q se realizan
      * @return 
      */
-    public actividadesDiarias[] getTiming() {
-        return Timing;
+    public Timing[] getTiming() {
+        return  actividadesDiarias;
     }
     /**
      * setter de las actividades diarias que se realizan
      * @param Timing 
      */
-    public void setTiming(actividadesDiarias[] Timing) {
-        this.Timing = Timing;
+    public void setTiming(Timing[] actividadesDiarias) {
+        this.actividadesDiarias = actividadesDiarias;
     }
     
     

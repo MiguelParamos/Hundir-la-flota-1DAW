@@ -10,15 +10,20 @@ package main;
  *
  * @author M.J.H
  */
-public class CosaconNombre {
-    String nombre;
+public class CosaConNombre {
+    private String nombre;
+    
+    public CosaConNombre(String n){
+        setNombre(n);
+    }
+    
     /**
      * @param args the command line arguments
      */
-   public String getnombre() {
+   public String getNombre() {
       return nombre;
    }
-   public void setName(String nombre) {
+   public void setNombre(String nombre) {
       this.nombre = nombre;
 
     }

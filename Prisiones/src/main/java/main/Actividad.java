@@ -13,9 +13,9 @@ import java.time.LocalTime;
  */
 public class Actividad extends Timing {
     
-    private guardias[] Guardia;//array de los guardias asignados a la actividad
-    private bloqueAsignado Bloque;//bloque donde se realiza la actividad
-    private habitacion HabitacionFuncional;//habitacin asignada a la actividad
+    private Guardia[] guardias;//array de los guardias asignados a la actividad
+    private Bloque bloqueAsignado;//bloque donde se realiza la actividad
+    private HabitacionFuncional habitacion ;//habitacin asignada a la actividad
     
     
     /**
@@ -27,55 +27,54 @@ public class Actividad extends Timing {
      * @param horaInicio hora a la que inicia la actividad
      * @param horaFin hora a la que finaliza la actividad
      */
-    public Actividad(String nombre, String guardias[], byte bloqueAsignado, String habitacion, LocalTime horaInicio, LocalTime horaFin) {
-        super(nombre,horaInicio,horaFin);
-        this.Guardia = guardias;
-        this.Bloque=bloqueAsignado;
-        this.HabitacionFuncional=habitacion;
-        
+    public Actividad(String nombre, Guardia[] guardias, Bloque bloqueAsignado, HabitacionFuncional habitacion, LocalTime horaInicio, LocalTime horaFin) {
+        super(horaInicio,horaFin);
+        this.guardias = guardias;
+        this.bloque=bloqueAsignado;
+        this.habitacion=habitacion;
     }
     
     /**
      * getter de los guardias de la actividad
      * @return 
      */
-    public guardias[] getGuardia() {
-        return Guardia;
+    public Guardia[] getGuardia() {
+        return guardias;
     }
     /**
      * setter de los guardias de la ctividad
      * @param Guardia 
      */
-    public void setGuardia(guardias[] Guardia) {
-        this.Guardia = Guardia;
+    public void setGuardia(Guardia[] guardias) {
+        this.guardias = guardias;
     }
     /**
      * getter de bloque asignado
      * @return 
      */
-    public bloqueAsignado getBloque() {
-        return Bloque;
+    public Bloque getBloque() {
+        return bloqueAsignado;
     }
     /**
      * setter del bloque asignado
      * @param Bloque 
      */
-    public void setBloque(bloqueAsignado Bloque) {
-        this.Bloque = Bloque;
+    public void setBloque( Bloque bloqueAsignado) {
+        this.bloqueAsignado = bloqueAsignado;
     }
     /**
      * getter de la habitacion asignada a la actividad
      * @return 
      */
-    public habitacion getHabitacionFuncional() {
-        return HabitacionFuncional;
+    public HabitacionFuncional getHabitacionFuncional() {
+        return habitacion;
     }
     /**
      * setter de la habitacion asignada a la actividad
      * @param HabitacionFuncional 
      */
-    public void setHabitacionFuncional(habitacion HabitacionFuncional) {
-        this.HabitacionFuncional = HabitacionFuncional;
+    public void setHabitacionFuncional(HabitacionFuncional habitacion ) {
+        this.habitacion = habitacion;
     }
     
 }

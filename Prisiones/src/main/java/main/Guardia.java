@@ -13,7 +13,7 @@ public class  Guardia extends Persona {
     private char turno;//turno del guardia
     private Trabajo trabajoQueSupervisa;//Trabajo de quien supervisa
     private Horario horario;//Horario del guardia
-    private Bloque bloqueAsignado//Bloque donde le corresponde el guardia
+    private Bloque bloqueAsignado;//Bloque donde le corresponde el guardia
     /**
      * Constructor de Guardia con todos los campos
      * @param nombre del guardia
@@ -106,7 +106,7 @@ public class  Guardia extends Persona {
           String aux="";
         aux+="Nombre: "+this.getNombre()+"";
         aux+="Apellido "+this.getApellido()+"\n";
-        aux+="Nif: "+this.getNif()+"\n";
+        aux+="Nif: "+this.getDni()+"\n";
         aux+="turno"+this.getTurno()+"\n";
         aux+="Trabajo "+this.getTrabajoQueSupervisa()+"\n";
         aux+="Horario: "+this.getHorario()+"\n";

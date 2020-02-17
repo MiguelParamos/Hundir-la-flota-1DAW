@@ -9,7 +9,7 @@ package main;
  * Celdas de la Prisión
  * @author Silvia SB
  */
-public class Celdas {
+public class Celda {
     private short numeroCelda;//numero asignado a cada celda
     private byte capacidad; // numero de presos en cada celda
     private Preso [] presos; // array de presos asignados en la celda
@@ -20,11 +20,30 @@ public class Celdas {
     * @param numeroCelda  número idenditificativo de la celda
     * @param capacidad número de presos en cada celda
     */
-    public Celdas (short numeroCelda, byte capacidad){
+    public Celda (short numeroCelda, byte capacidad,Bloque b){
         this.setNumeroCelda(numeroCelda);
         this.setCapacidad(capacidad);
 
+
     }
+
+    public void setNumeroCelda(short numeroCelda) {
+        this.numeroCelda = numeroCelda;
+    }
+
+    public void setPresos(Preso[] presos) {
+        this.presos = presos;
+    }
+
+    public Bloque getBloque() {
+        return bloque;
+    }
+
+    public void setBloque(Bloque bloque) {
+        this.bloque = bloque;
+    }
+    
+    
 /**
  * getter de NumeroCelda
  * @return numeroCelda

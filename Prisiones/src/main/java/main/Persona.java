@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package main; 
 
 /**
  * Descripción clase Persona: Clase que define a las personas.
@@ -19,8 +19,8 @@ public class Persona extends CosaConNombre{
      * @param a Parámetro que recibe el apellido de las personas.
      * @param d Parámetro que recibe el DNI de las personas.
      */
-    public Persona(String a, String d){
-    super("nombre");
+    public Persona(String n,String a, String d){
+    super(n);
     this.setApellido(a);
     this.setDni(dni);
     
