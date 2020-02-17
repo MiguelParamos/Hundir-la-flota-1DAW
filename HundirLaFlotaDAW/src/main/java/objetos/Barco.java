@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
  *Clase barco donde alojaremos todo lo relacionado con el

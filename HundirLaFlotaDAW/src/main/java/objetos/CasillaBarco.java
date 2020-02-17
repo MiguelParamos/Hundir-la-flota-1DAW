@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
  * Descripción Clase CasillaBarco: Clase que describe las casillas del tablero.
@@ -66,6 +66,7 @@ public class CasillaBarco {
             return false;
         }
         
+        return false;
     }
     /**
      * Descripción getter isTocado: Se utiliza para acceder al valor de la variable tocado.
@@ -81,6 +82,8 @@ public class CasillaBarco {
     public void setTocado(boolean tocado) {
         this.tocado = tocado;
     }
+    
+    
     
     
     
