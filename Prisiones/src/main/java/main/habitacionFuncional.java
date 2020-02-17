@@ -6,7 +6,7 @@ package main;
  * @author Ale Rios
  */
 public class HabitacionFuncional extends CosaConNombre{
-    private byte bloque; // Numero de bloque
+    private Bloque bloqueAsignado;  // Bloque donde se encuentra la habitacionFuncional
     
     /**
      * Constructor de habitacionFuncional
@@ -15,7 +15,7 @@ public class HabitacionFuncional extends CosaConNombre{
      */
     public HabitacionFuncional (String nombre, byte bloque){
         super(nombre); 
-        this.bloque = bloque;
+        this.bloqueAsignado = bloque;
     }
 
     /**
@@ -23,7 +23,7 @@ public class HabitacionFuncional extends CosaConNombre{
      * @return devuelve bloque
      */
     public byte getBloque() {
-        return bloque;
+        return bloqueAsignado;
     }
 
     /**
@@ -31,7 +31,7 @@ public class HabitacionFuncional extends CosaConNombre{
      * @param bloque para crear un bloque
      */
     public void setBloque(byte bloque) {
-        this.bloque = bloque;
+        this.bloqueAsignado = bloque;
     }
     
 }
