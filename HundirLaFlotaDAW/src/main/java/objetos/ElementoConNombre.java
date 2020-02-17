@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
- *
- * @author 2DAW
+ *Clase ElementoConNombre
+ * @author Ale Ríos
  */
 public class ElementoConNombre {
     /**
- * Clase ElementoConNombre
- * Ale Ríos
+ * 
+ * 
  */
 
     private String nombre;

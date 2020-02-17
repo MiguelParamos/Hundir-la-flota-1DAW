@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 import java.util.Scanner;
 
 /**
- *
+ * 
  * @author Javier Alcalde
  * @author Daniel Pérez
  * Descripción clase Mapa: Clase que contiene los elementos 
@@ -93,4 +93,11 @@ public class Mapa {
         this.ncolumnas = ncolumnas;
     }
     
+    /**
+     * Imprime el mapa como debería verlo el rival
+     * @return String con el mapa concatenado
+     */
+    public String imprimeParaRival(){
+        return null;
+    }
 }

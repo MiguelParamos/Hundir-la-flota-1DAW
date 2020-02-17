@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 /**
  * Objeto Jugador, encangado de realizar funciones del juego
@@ -14,7 +14,12 @@ public class Jugador extends ElementoConNombre{
 
     private byte puntuacion;// puntos obtenidos por el jugador
     private Mapa mapa;// localización de las piezas (barco/avión) del jugador
-
+/**
+ * Constructor de Jugador
+ * @param n
+ * @param puntuacion
+ * @param mapa 
+ */
     public Jugador(String n,byte puntuacion, Mapa mapa) {
         super(n);
         this.setPuntuacion(puntuacion);
@@ -68,7 +73,7 @@ public class Jugador extends ElementoConNombre{
  * @param turno, momento de la partida
  * @return turno
  */
-    public String jugarTurno(int turno) {
+    public String jugarTurno(int turno,Jugador rival) {
         return turno + "";
     }
 /**
@@ -85,7 +90,15 @@ public class Jugador extends ElementoConNombre{
      * @return  false, ha ganado la partida
      */
     public boolean hasPerdido() {
-
-        return false;
+        //Como tengo que recorrer todas las posiciones, necesito un for
+        for (int i = 0; i < this.mapa.getElementos().length; i++) {
+            //Miro a ver: Si algún barco o avión está normal o tocado, aún no he perdido
+            if(this.mapa.getElementos()[i].getEstado()=='t'||
+                    this.mapa.getElementos()[i].getEstado()=='n'){
+                return false;
+            }
+        }
+        //Si no hay ningún barco tocado o normal, es que todos están hundidos, y he perdido
+        return true;
     }
 }
