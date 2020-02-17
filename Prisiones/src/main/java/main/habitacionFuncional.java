@@ -13,7 +13,7 @@ public class HabitacionFuncional extends CosaConNombre{
      * @param nombre (nombre habitacion)
      * @param bloque (numero de bloque)
      */
-    public HabitacionFuncional (String nombre, byte bloque){
+    public HabitacionFuncional (String nombre, Bloque bloque){
         super(nombre); 
         this.bloqueAsignado = bloque;
     }
@@ -30,7 +30,7 @@ public class HabitacionFuncional extends CosaConNombre{
      * Setter de bloque
      * @param bloque para crear un bloque
      */
-    public void setBloque(byte bloque) {
+    public void setBloque(Bloque bloque) {
         this.bloqueAsignado = bloque;
     }
     
