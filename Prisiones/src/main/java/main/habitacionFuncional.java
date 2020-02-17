@@ -3,7 +3,7 @@ package main;
 
 /**
  *Esta es la clase de habitacion funcional que define una habitacion y todo lo relacionado con ella
- * @author Ale
+ * @author Ale Rios
  */
 public class HabitacionFuncional extends CosaConNombre{
     private byte bloque; // Numero de bloque
@@ -26,7 +26,10 @@ public class HabitacionFuncional extends CosaConNombre{
         return bloque;
     }
 
- 
+    /**
+     * Setter de bloque
+     * @param bloque para crear un bloque
+     */
     public void setBloque(byte bloque) {
         this.bloque = bloque;
     }
