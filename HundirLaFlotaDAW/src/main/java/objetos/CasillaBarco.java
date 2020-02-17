@@ -58,15 +58,11 @@ public class CasillaBarco {
      * @return el estado del barco 
      */
     public boolean recibirDisparo(byte xRecibida,byte yRecibida){
-        if (xRecibida==this.posX&&yRecibida==this.posY) {
-            
+        if (xRecibida==this.posX&&yRecibida==this.posY) {    
             this.tocado=true;
-            return true;
-        }else{
-            return false;
         }
+        return this.tocado;
         
-        return false;
     }
     /**
      * Descripción getter isTocado: Se utiliza para acceder al valor de la variable tocado.

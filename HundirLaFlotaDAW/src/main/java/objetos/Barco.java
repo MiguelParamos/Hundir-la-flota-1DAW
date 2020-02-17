@@ -18,10 +18,9 @@ public class Barco extends VehiculoDeCombate{
  * @param posiciones la posicion del barco
  * @param n el nombre del barco
  * @param s simbolo del barco
- * @param e estado del barco
  */
     public Barco(CasillaBarco []posiciones, String n,char s,char e){
-        super(posiciones,n,s,e);
+        super(posiciones,n,s);
         
     } 
     

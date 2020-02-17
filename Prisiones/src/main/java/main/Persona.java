@@ -21,29 +21,27 @@ public class Persona extends CosaConNombre{
      */
     public Persona(String a, String d){
     super("nombre");
-    this.setPersona(a,d);
+    this.setApellido(a);
+    this.setDni(dni);
     
 } 
-    /**
-     * Descripción getter getPersona: Se utiliza para acceder a los valores de las personas.
-     * @return Retorna el apellido y el DNI de las personas.
-     */
-    public String getPersona(){
-        
-        return this.apellido+this.dni;
-              
+
+    public String getApellido() {
+        return apellido;
     }
-    /**
-     * Descripción setter setPersona: Sirve para modificar el apellido y el DNI de las personas.
-     * @param a Parámetro que recibe el apellido de las personas.
-     * @param d Parámetro que recibe el DNI de las personas.
-     */
-    public final void setPersona(String a,String d){
-        
-        this.apellido=a;
-        this.dni=d;
-        
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
     
     
 }
