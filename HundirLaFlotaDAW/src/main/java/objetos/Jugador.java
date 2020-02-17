@@ -5,6 +5,8 @@
  */
 package objetos;
 
+import java.util.Scanner;
+
 /**
  * Objeto Jugador, encangado de realizar funciones del juego
  *
@@ -63,18 +65,44 @@ public class Jugador extends ElementoConNombre{
  * @param posX posición de disparo barco/avión en el eje X del mapa del rival
  * @param posY posición de disparo a barco/avión en el eje X del mapa del rival
  * @param mapaRival indicará si le ha dado al barco/avión o al agua
- * @return String
+ * @return boolean
  */
-    public String disparar(byte posX, byte posY, Mapa mapaRival) {
-        return "dado";
+    public boolean disparar(byte posX, byte posY, Mapa mapaRival) {
+        return posX==mapa.getNfilas()&&posY==mapa.getNcolumnas();
     }
 /**
- * Función que devulve el turno del jugador
- * @param turno, momento de la partida
- * @return turno
+ * Función: el jugador toma acción contra otro jugador
+ * @param turno turno correspondiente
+ * @param rival persona enemiga
+ * @return null 
  */
-    public String jugarTurno(int turno,Jugador rival) {
-        return turno + "";
+    public String jugarTurno(int turno, Jugador rival) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Turno "+turno);
+        mapa.toString();
+        System.out.println(imprimeParaRival(rival));
+        byte dfila, dcolumna;
+        do {
+            System.out.println("Indique la fila que desea disapara");
+            dfila=Byte.parseByte(sc.nextLine());
+            System.out.println("Indique la columna que desea disapara");
+            dcolumna=Byte.parseByte(sc.nextLine());
+        } while (dfila>mapa.getNfilas()&&dcolumna>mapa.getNcolumnas());
+        
+        if (disparar(dfila, dcolumna, this.getMapa())) {
+            System.out.println("¡He tocado un vehículo!");
+        }else{
+            System.out.println("¡Agua!");
+        }
+        return null;
+    }
+    /**
+     * Función crea mapa del jugador rival
+     * @param rival
+     * @return 
+     */
+    public String imprimeParaRival(Jugador rival){
+        return null;
     }
 /**
  * Función que devuelve el nombre del Jugador

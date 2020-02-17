@@ -11,6 +11,8 @@ import java.util.Scanner;
  * 
  * @author Javier Alcalde
  * @author Daniel Pérez
+ * Descripción clase Mapa: Clase que contiene los elementos 
+ * de las otras clases y dónde interactúan.
  */
 public class Mapa {
     
@@ -18,7 +20,10 @@ public class Mapa {
     private byte nfilas; //número de filas
     private byte ncolumnas; // número de columnas
 
-    //constructor
+    /**
+     * Descripción constructor Mapa: Se le da el valor a las variables 
+     * internas de los setters.
+     */
     public Mapa(VehiculoDeCombate[] elementos, byte nfilas, byte ncolumnas) {
         this.setElementos(elementos);
         this.setNfilas(nfilas);
@@ -28,6 +33,11 @@ public class Mapa {
       
     //funcion toString
     public String toString() {
+        
+        return null;
+    }
+    
+    public String imprimeParaRival(){
         
         return null;
     }
@@ -45,7 +55,7 @@ public class Mapa {
     //
     /**
      * Getter getElementos
-     * @return elementos-
+     * @return elementos.
      */
     public VehiculoDeCombate[] getElementos() {
         return elementos;
