@@ -11,7 +11,9 @@ package main;
  */
 public class Bloque {
     private byte nbloque;
-
+    private Celda [] celda;
+    private HabitacionFuncional [] HabitacionFuncional;
+    private Baños [] Baños;
         public Bloque(byte b){
         setBloque(b);
         
