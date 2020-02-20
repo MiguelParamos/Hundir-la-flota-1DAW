@@ -6,7 +6,7 @@
 package objetos;
 
 /**
- *
+ *Clase Posicion Mapa describe las posiciones
  * @author nicoc
  */
 public class PosicionMapa {
