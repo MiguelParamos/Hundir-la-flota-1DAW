@@ -19,7 +19,7 @@ public class Preso extends Persona {
     private short sueldo;
     private Horario horario;
     private Trabajo trabajo;
-    private Celdas celdas;
+    private Celda celda;
     private LocalDate fechaIngreso;
     private LocalDate fechaSalida;
     
@@ -37,8 +37,8 @@ public class Preso extends Persona {
      * @param fechaIngreso
      * @param fechaSalida 
      */
-    public Preso(String apellido, String dni, short id, String expediente, byte nivelPeligro, short sueldo, Horario horario, Trabajo trabajo, Celdas celdas, LocalDate fechaIngreso, LocalDate fechaSalida) {
-        super(apellido, dni);
+    public Preso(String n,String apellido, String dni, short id, String expediente, byte nivelPeligro, short sueldo, Horario horario, Trabajo trabajo, Celdas celdas, LocalDate fechaIngreso, LocalDate fechaSalida) {
+        super(n,apellido, dni);
         this.setId(id);
         this.setExpediente(expediente);
         this.setNivelPeligro(nivelPeligro);
@@ -182,16 +182,16 @@ public class Preso extends Persona {
      * Getter de Celda
      * @return numero de celda del preso
      */
-    public Celdas getCeldas() {
-        return celdas;
+    public Celda getCelda() {
+        return celda;
     }
 
     /**
      * Setter de Celda
-     * @param celdas 
+     * @param celda
      */
-    public void setCeldas(Celdas celdas) {
-        this.celdas = celdas;
+    public void setCelda(Celda celda) {
+        this.celda = celda;
     }
 
     /**

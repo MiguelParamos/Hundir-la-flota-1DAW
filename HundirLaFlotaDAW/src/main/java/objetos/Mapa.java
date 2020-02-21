@@ -48,7 +48,7 @@ public class Mapa {
     }
     //funcion recibirDisparo
     public boolean recibirDisparo(int posX, int posY){
- 
+        
         return true;
     }
     
@@ -98,11 +98,4 @@ public class Mapa {
         this.ncolumnas = ncolumnas;
     }
     
-    /**
-     * Imprime el mapa como debería verlo el rival
-     * @return String con el mapa concatenado
-     */
-    public String imprimeParaRival(){
-        return null;
-    }
 }

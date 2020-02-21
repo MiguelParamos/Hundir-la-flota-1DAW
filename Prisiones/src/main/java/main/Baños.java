@@ -20,7 +20,7 @@ public class Baños {
      */
   public Baños (byte nDuchas, Preso[] presos){
         this.setnDuchas(nDuchas);
-        this.setPreso(presos);
+        this.setPresos(presos);
 
     }    
     
