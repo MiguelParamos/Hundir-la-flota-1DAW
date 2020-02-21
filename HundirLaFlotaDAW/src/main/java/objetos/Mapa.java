@@ -66,9 +66,18 @@ public class Mapa {
     }
     //funcion recibirDisparo
     public boolean recibirDisparo(int posX, int posY){
- 
-        return true;
+       int[][] posicion = new int [posX][posY];
+   
+        for (int i = 0; i < posicion.length; i++) {
+            for (int j = 0; j < posicion[i].length; j++) {
+                if (this.recibirDisparo(posX, posY) == true) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
+
     
     //
     /**
