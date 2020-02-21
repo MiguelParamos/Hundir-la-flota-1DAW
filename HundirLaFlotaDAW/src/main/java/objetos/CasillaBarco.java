@@ -9,10 +9,9 @@ package objetos;
  * Descripción Clase CasillaBarco: Clase que describe las casillas del tablero.
  * @author Raúl González Parra
  */
-public class CasillaBarco {
+public class CasillaBarco extends PosicionMapa {
     
-  private byte posX;//Posición X del tablero.
-  private byte posY;//Posición Y del tablero.
+  
   private boolean tocado;//Indica si un barco o un avión le ha disparado a una casilla.
     
     /**
@@ -22,8 +21,7 @@ public class CasillaBarco {
      * @param t Indicador de casillas.
      */
     public CasillaBarco(byte x,byte y,boolean t){
-        
-        this.setSituacion(x, y);
+        super(x,y);
         this.tocado=t;
         
     }
@@ -31,25 +29,27 @@ public class CasillaBarco {
      * Descripción getter getSituacion: Sirve para acceder a las posiciones X e Y.
      * @return retorna los valores que tienen las posiciones X e Y.
      */
-    public byte[] getSituacion(){
+    
+  /*  public byte[] getSituacion(){
         
         byte[] posiciones=new byte[2];
         posiciones[0]=this.posX;
         posiciones[1]=this.posY;
         
           return posiciones;
-        }
+        }*/
     /**
      * Descripción setter setSituación: Sirve para comprobar y modificar las posiciones de los vehiculos(barcos y aviones).
      * @param x Posición X del tablero.
      * @param y Posición Y del tablero.
      */    
+    /*
     public void setSituacion(byte x,byte y){
         
         this.posX=x;
         this.posY=y;
         
-    }
+    }*/
     /**
      * Descripción metodo recibirDisparo: Se utiliza para indicar si un barco o un avión le ha disparado a una casilla
      * Comparando la x e y recibido por las casillas donde esté el barco.
@@ -58,7 +58,7 @@ public class CasillaBarco {
      * @return el estado del barco 
      */
     public boolean recibirDisparo(byte xRecibida,byte yRecibida){
-        if (xRecibida==this.posX&&yRecibida==this.posY) {    
+        if (xRecibida==this.getPosX()&&yRecibida==this.getPosY()) {    
             this.tocado=true;
         }
         return this.tocado;

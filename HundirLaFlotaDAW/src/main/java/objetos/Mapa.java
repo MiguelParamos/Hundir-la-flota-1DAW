@@ -19,16 +19,34 @@ public class Mapa {
     private VehiculoDeCombate[] elementos;//vehículo de combate
     private byte nfilas; //número de filas
     private byte ncolumnas; // número de columnas
+    private PosicionMapa[] disparosRecibidos;// disparos recibidos en las posiciones del mapa
 
     /**
      * Descripción constructor Mapa: Se le da el valor a las variables 
      * internas de los setters.
      */
-    public Mapa(VehiculoDeCombate[] elementos, byte nfilas, byte ncolumnas) {
+    public Mapa(VehiculoDeCombate[] elementos, byte nfilas, byte ncolumnas, PosicionMapa[] disparosRecibidos) {
         this.setElementos(elementos);
         this.setNfilas(nfilas);
         this.setNcolumnas(ncolumnas);
+        this.setdisparosRecibidos(disparosRecibidos);
  
+    }
+    
+    /**
+     * getter de disparosRecibidos
+     * @return 
+     */
+    public PosicionMapa[] getDisparosRecibidos() {
+        return disparosRecibidos;
+    }
+    
+    /**
+     * setter de disparosRecibidos
+     * @param disparosRecibidos 
+     */
+    public void setDisparosRecibidos(PosicionMapa[] disparosRecibidos) {
+        this.disparosRecibidos = disparosRecibidos;
     }
       
     //funcion toString
@@ -48,9 +66,18 @@ public class Mapa {
     }
     //funcion recibirDisparo
     public boolean recibirDisparo(int posX, int posY){
-        
-        return true;
+       int[][] posicion = new int [posX][posY];
+   
+        for (int i = 0; i < posicion.length; i++) {
+            for (int j = 0; j < posicion[i].length; j++) {
+                if (this.recibirDisparo(posX, posY) == true) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
+
     
     //
     /**

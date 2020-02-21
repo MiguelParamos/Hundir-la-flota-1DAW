@@ -67,8 +67,20 @@ public class Jugador extends ElementoConNombre{
  * @param mapaRival indicará si le ha dado al barco/avión o al agua
  * @return boolean
  */
-    public boolean disparar(byte posX, byte posY, Mapa mapaRival) {
+    public boolean disparar(byte posX, byte posY, Mapa mapaRival, VehiculoDeCombate[] elementos) {
         
+        for (int i = 0; i < elementos.length; i++) {
+            
+            if(elementos[i].recibirDisparo(posX, posY)==true){
+                
+                return true;
+                
+            }    
+                
+            }
+            
+        
+        return false;
     }
 /**
  * Función: el jugador toma acción contra otro jugador
