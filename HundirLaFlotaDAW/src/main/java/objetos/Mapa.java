@@ -29,7 +29,7 @@ public class Mapa {
         this.setElementos(elementos);
         this.setNfilas(nfilas);
         this.setNcolumnas(ncolumnas);
-        this.setdisparosRecibidos(disparosRecibidos);
+        this.setDisparosRecibidos(disparosRecibidos);
  
     }
     
@@ -49,15 +49,67 @@ public class Mapa {
         this.disparosRecibidos = disparosRecibidos;
     }
       
-    //funcion toString
+    /**
+     * Función toString(): genera el mapa del jugador
+     * @return el mapa del mismo jugador
+     */
     public String toString() {
-        
-        return null;
+        String res="";
+        boolean noes=true;
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncolumnas; j++) {
+                for (int k = 0; k < elementos.length; k++) {
+                    for (int l = 0; l < elementos[k].getPosiciones().length; l++) {
+                        if(elementos[k].getPosiciones()[l].getPosX()==i&&elementos[k].getPosiciones()[l].getPosY()==j){ //A hay un vehículo dado con anterioridad
+                            res+=elementos[k].getSimbolo()+"\t";
+                            noes=false;
+                        }
+                    } 
+                }
+                if(noes){
+                    res+="~\t";
+                }
+            }
+            res+="\n";
+        }
+        return res;
     }
     
+    /**
+     * Imprime el mapa como debería verlo el rival
+     * @return String con el mapa concatenado
+     */
     public String imprimeParaRival(){
-        
-        return null;
+        String res="";
+        boolean vehiculo=false;
+        boolean noes=true;
+        for (int i = 0; i < nfilas; i++) {
+            for (int j = 0; j < ncolumnas; j++) {
+                for (int k = 0; k < elementos.length; k++) {
+                    for (int l = 0; l < elementos[k].getPosiciones().length; l++) {
+                        if(elementos[k].getPosiciones()[l].getPosX()==i&&elementos[k].getPosiciones()[l].getPosY()==j){ //A hay un vehículo dado con anterioridad
+                            for (int m = 0; m < disparosRecibidos.length; m++) {
+                                if(elementos[k].getPosiciones()[l].getPosX()==disparosRecibidos[m].getPosX()
+                                        &&elementos[k].getPosiciones()[l].getPosY()==disparosRecibidos[m].getPosY()
+                                        ){//Compruebo si realmente hay un vahículo 
+                                    res+=elementos[k].getSimbolo()+"\t";
+                                    noes=false;
+                                    vehiculo=true;
+                                }else if(i==disparosRecibidos[m].getPosX()&&j==disparosRecibidos[m].getPosY()&&!vehiculo){
+                                    res+="~\t";
+                                    noes=false;
+                                }
+                            }
+                        }
+                    } 
+                }
+                if(noes){
+                    res+="?\t";
+                }              
+            }
+            res+="\n";
+        }
+        return res;
     }
 
      //funcion colocarBarcosyAviones   
@@ -116,11 +168,4 @@ public class Mapa {
         this.ncolumnas = ncolumnas;
     }
     
-    /**
-     * Imprime el mapa como debería verlo el rival
-     * @return String con el mapa concatenado
-     */
-    public String imprimeParaRival(){
-        return null;
-    }
 }

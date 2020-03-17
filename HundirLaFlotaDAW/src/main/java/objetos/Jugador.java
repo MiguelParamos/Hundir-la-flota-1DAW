@@ -80,7 +80,7 @@ public class Jugador extends ElementoConNombre{
         Scanner sc=new Scanner(System.in);
         System.out.println("Turno "+turno);
         mapa.toString();
-        System.out.println(imprimeParaRival(rival));
+        System.out.println(rival.mapa.imprimeParaRival());
         byte dfila, dcolumna;
         do {
             System.out.println("Indique la fila que desea disapara");
@@ -101,7 +101,8 @@ public class Jugador extends ElementoConNombre{
      * @param rival
      * @return 
      */
-    public String imprimeParaRival(Jugador rival){
+    public String imprimeParaRival(){
+        
         return null;
     }
 /**
