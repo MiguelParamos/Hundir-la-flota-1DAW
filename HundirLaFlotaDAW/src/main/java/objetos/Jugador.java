@@ -67,8 +67,20 @@ public class Jugador extends ElementoConNombre{
  * @param mapaRival indicará si le ha dado al barco/avión o al agua
  * @return boolean
  */
-    public boolean disparar(byte posX, byte posY, Mapa mapaRival) {
-        return posX==mapa.getNfilas()&&posY==mapa.getNcolumnas();
+    public boolean disparar(byte posX, byte posY, Mapa mapaRival, VehiculoDeCombate[] elementos) {
+        
+        for (int i = 0; i < elementos.length; i++) {
+            
+            if(elementos[i].recibirDisparo(posX, posY)==true){
+                
+                return true;
+                
+            }    
+                
+            }
+            
+        
+        return false;
     }
 /**
  * Función: el jugador toma acción contra otro jugador
@@ -76,35 +88,26 @@ public class Jugador extends ElementoConNombre{
  * @param rival persona enemiga
  * @return null 
  */
-    public String jugarTurno(int turno, Jugador rival) {
+    public void jugarTurno(int turno, Jugador rival) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Turno "+turno);
-        mapa.toString();
-        System.out.println(rival.mapa.imprimeParaRival());
+        System.out.println(mapa);
+        System.out.println(rival.getMapa().imprimeParaRival());
         byte dfila, dcolumna;
         do {
             System.out.println("Indique la fila que desea disapara");
             dfila=Byte.parseByte(sc.nextLine());
             System.out.println("Indique la columna que desea disapara");
             dcolumna=Byte.parseByte(sc.nextLine());
-        } while (dfila>mapa.getNfilas()&&dcolumna>mapa.getNcolumnas());
+        } while (dfila>=mapa.getNfilas()&&dcolumna>=mapa.getNcolumnas());
         
-        if (disparar(dfila, dcolumna, this.getMapa())) {
+        if (disparar(dfila, dcolumna, rival.getMapa())) {
             System.out.println("¡He tocado un vehículo!");
         }else{
             System.out.println("¡Agua!");
         }
-        return null;
     }
-    /**
-     * Función crea mapa del jugador rival
-     * @param rival
-     * @return 
-     */
-    public String imprimeParaRival(){
-        
-        return null;
-    }
+
 /**
  * Función que devuelve el nombre del Jugador
  * @param nombre nombre dle jugador

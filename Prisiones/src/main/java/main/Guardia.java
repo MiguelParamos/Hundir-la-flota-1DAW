@@ -106,7 +106,7 @@ public class  Guardia extends Persona {
           String aux="";
         aux+="Nombre: "+this.getNombre()+"";
         aux+="Apellido "+this.getApellido()+"\n";
-        aux+="Nif: "+this.getDni()+"\n";
+        aux+="Nif: "+this.getDni()+"\n";    
         aux+="turno"+this.getTurno()+"\n";
         aux+="Trabajo "+this.getTrabajoQueSupervisa()+"\n";
         aux+="Horario: "+this.getHorario()+"\n";
